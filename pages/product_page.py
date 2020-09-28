@@ -7,10 +7,6 @@ class ProductPage(BasePage):
         link = self.browser.find_element(*ProductPageLocators.BUTTON_ADD_TO_CART)
         link.click()
 
-    def go_to_cart(self):
-        view_link = self.browser.find_element(*ProductPageLocators.BUTTON_VIEW_CART)
-        view_link.click()
-
     def get_name_item_from_success_message(self):
         return self.browser.find_element(*ProductPageLocators.PRODUCT_IN_SUCCESS_ADD_MESSAGE).text
 
