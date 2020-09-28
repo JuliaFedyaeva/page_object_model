@@ -30,3 +30,9 @@ class ProductPage(BasePage):
     def should_be_right_total_price_in_success_message(self):
         assert self.get_item_price_on_product_page() == self.get_item_price_from_success_message(), \
             "Wrong total price in success add message"
+
+    def should_be_no_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE)
+
+    def should_disappear_success_message(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE)
