@@ -28,7 +28,6 @@ class BasePage():
         assert self.is_element_present(*BasePageLocators.LOGIN_LINK), \
             "Login link is not presented"
 
-
     def is_element_present(self, how, what):
         try:
             self.browser.find_element(how, what)
