@@ -3,6 +3,9 @@ from .locators import ProductPageLocators
 
 
 class ProductPage(BasePage):
+    def __init__(self, browser):
+        BasePage.__init__(self, browser, ProductPageLocators.PRODUCT_PAGE_LINK)
+
     def add_product_to_cart(self):
         link = self.browser.find_element(*ProductPageLocators.BUTTON_ADD_TO_CART)
         link.click()

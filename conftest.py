@@ -4,8 +4,10 @@ from selenium.webdriver.chrome.options import Options
 
 
 def pytest_addoption(parser):
-    parser.addoption('--language', action='store', default="en",
+    parser.addoption('--language', action='store', default="None",
                      help="Choose your language")
+    parser.addoption('--browser', action='store', default="None",
+                     help="Choose browser: chrome or firefox")
 
 
 @pytest.fixture(scope="function")
@@ -16,10 +18,18 @@ def browser(request):
     options = Options()
     options.add_experimental_option('prefs', {'intl.accept_languages': browser_language})
 
-    print("\nstart chrome document for test..")
-    document = webdriver.Chrome(options=options)
-    document.implicitly_wait(5)
+    browser_name = request.config.getoption("browser")
+    if browser_name == "chrome":
+        print("\nstart chrome browser for test..")
+        document = webdriver.Chrome(options=options)
+        document.implicitly_wait(5)
+    elif browser_name == "firefox":
+        print("\nstart firefox browser for test..")
+        document = webdriver.Firefox(options=options)
+        document.implicitly_wait(5)
+    else:
+        print("Browser {} still is not implemented".format(browser_name))
 
-    yield document
+    yield browser
     print("\nquit document..")
-    document.quit()
+    browser.quit()

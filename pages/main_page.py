@@ -1,8 +1,7 @@
 from .base_page import BasePage
+from .locators import MainPageLocators
 
 
 class MainPage(BasePage):
-    def __init__(self, *args, **kwargs):
-        super(MainPage, self).__init__(*args, **kwargs)
-# вызывает конструктор класса предка и передает ему все те аргументы,
-# которые мы передали в конструктор MainPage
+    def __init__(self, browser):
+        BasePage.__init__(self, browser, MainPageLocators.MAIN_PAGE_LINK)
