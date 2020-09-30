@@ -1,9 +1,10 @@
 import time
 
 
-class LoginPageData():
-    # def get_new_email(self):
-    #    return self.str(time.time()) + "@fakemail.org"
+def get_new_email():
+    return str(time.time()) + "@fakemail.org"
 
-    EMAIL = 'fake8@fake1.ru'
+
+class LoginPageData():
+    EMAIL = get_new_email()
     PASSWORD = "nekakuvseh123"
