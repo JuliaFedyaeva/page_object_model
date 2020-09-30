@@ -28,7 +28,7 @@ def browser(request):
         document.implicitly_wait(5)
     elif browser_name == "firefox":
         print("\nstart firefox browser for test..")
-        document = browser = webdriver.Firefox(firefox_profile=fp)
+        document = webdriver.Firefox(firefox_profile=fp)
         document.implicitly_wait(5)
     else:
         print("Browser {} still is not implemented".format(browser_name))
