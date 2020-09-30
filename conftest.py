@@ -18,6 +18,9 @@ def browser(request):
     options = Options()
     options.add_experimental_option('prefs', {'intl.accept_languages': browser_language})
 
+    fp = webdriver.FirefoxProfile()
+    fp.set_preference("intl.accept_languages", browser_language)
+
     browser_name = request.config.getoption("browser")
     if browser_name == "chrome":
         print("\nstart chrome browser for test..")
@@ -25,7 +28,7 @@ def browser(request):
         document.implicitly_wait(5)
     elif browser_name == "firefox":
         print("\nstart firefox browser for test..")
-        document = webdriver.Firefox(options=options)
+        document = browser = webdriver.Firefox(firefox_profile=fp)
         document.implicitly_wait(5)
     else:
         print("Browser {} still is not implemented".format(browser_name))
