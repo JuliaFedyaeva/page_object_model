@@ -21,6 +21,8 @@ def browser(request):
     fp = webdriver.FirefoxProfile()
     fp.set_preference("intl.accept_languages", browser_language)
 
+    document = None
+
     browser_name = request.config.getoption("browser")
     if browser_name == "chrome":
         print("\nstart chrome browser for test..")
