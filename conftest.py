@@ -33,6 +33,6 @@ def browser(request):
     else:
         print("Browser {} still is not implemented".format(browser_name))
 
-    yield browser
+    yield document
     print("\nquit document..")
-    browser.quit()
+    document.quit()
