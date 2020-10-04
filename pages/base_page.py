@@ -8,10 +8,9 @@ from .locators import BasePageLocators
 
 
 class BasePage():
-    def __init__(self, browser, url, timeout=10):
+    def __init__(self, browser, url):
         self.browser = browser
         self.url = url
-        self.browser.implicitly_wait(timeout)
 
     def open(self):
         self.browser.get(self.url)
@@ -69,3 +68,11 @@ class BasePage():
             alert.accept()
         except NoAlertPresentException:
             print("No second alert presented")
+
+    @staticmethod
+    def find(parent, locator):
+        return parent.find_element_by_css_selector(locator)
+
+    @staticmethod
+    def find_xpath(parent, locator):
+        return parent.find_element_by_xpath(locator)
