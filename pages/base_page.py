@@ -27,6 +27,18 @@ class BasePage():
         assert self.is_element_present(*BasePageLocators.LOGIN_LINK), \
             "Login link is not presented"
 
+    def should_be_catalog_link(self):
+        assert self.is_element_present(*BasePageLocators.CATALOG_LINK), \
+            "Catalog link is not presented"
+
+    def should_be_cart_link(self):
+        assert self.is_element_present(*BasePageLocators.CART_LINK), \
+            "Cart link is not presented"
+
+    def should_be_search_form(self):
+        self.browser.find_element(*BasePageLocators.INPUT_SEARCH).clear()
+
+
     def should_be_authorized_user(self):
         assert self.is_element_present(*BasePageLocators.USER_ICON), "User icon is not presented," \
                                                                      " probably unauthorised user"
@@ -68,11 +80,3 @@ class BasePage():
             alert.accept()
         except NoAlertPresentException:
             print("No second alert presented")
-
-    @staticmethod
-    def find(parent, locator):
-        return parent.find_element_by_css_selector(locator)
-
-    @staticmethod
-    def find_xpath(parent, locator):
-        return parent.find_element_by_xpath(locator)
