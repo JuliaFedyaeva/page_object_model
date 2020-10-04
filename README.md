@@ -1,1 +1,8 @@
-# page_object_project
+# Автотесты
+Это репозиторий для хранений автотестов по сайту http://selenium1py.pythonanywhere.com.
+* Я: [Yulia Fedyaeva](https://vk.com/spudnik).
+В проекте используется Page Object Model.
+В папке allure_reports можно посмотреть отчёт о прохождении одного из тест-сьютов.
+В папке test_cases можно посмотреть несколько тест-кейсов по мотивам которых делались некоторые автотесты.
+
+
