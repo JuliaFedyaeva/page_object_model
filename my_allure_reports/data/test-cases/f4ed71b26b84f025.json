@@ -1,0 +1,80 @@
+{
+  "uid" : "f4ed71b26b84f025",
+  "name" : "test_guest_should_see_login_link_on_product_page",
+  "fullName" : "test_product_page#test_guest_should_see_login_link_on_product_page",
+  "historyId" : "951ca461214fb73e60011e23f01653ef",
+  "time" : {
+    "start" : 1601465088594,
+    "stop" : 1601465090209,
+    "duration" : 1615
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "browser",
+    "time" : {
+      "start" : 1601465085202,
+      "stop" : 1601465088593,
+      "duration" : 3391
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "browser::0",
+    "time" : {
+      "start" : 1601465090210,
+      "stop" : 1601465092436,
+      "duration" : 2226
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "test_product_page"
+  }, {
+    "name" : "host",
+    "value" : "LAPTOP-HNTU4GQT"
+  }, {
+    "name" : "thread",
+    "value" : "16264-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_product_page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f4ed71b26b84f025.json",
+  "parameterValues" : [ ]
+}

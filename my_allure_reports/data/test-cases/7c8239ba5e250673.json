@@ -1,0 +1,119 @@
+{
+  "uid" : "7c8239ba5e250673",
+  "name" : "test_guest_can_register",
+  "fullName" : "test_main_page.TestLoginFromMainPage#test_guest_can_register",
+  "historyId" : "d59a10ad74730b14ff543f444d6d7d57",
+  "time" : {
+    "start" : 1601832727941,
+    "stop" : 1601832733591,
+    "duration" : 5650
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "browser",
+    "time" : {
+      "start" : 1601832724741,
+      "stop" : 1601832727940,
+      "duration" : 3199
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "55b5812ee987995a",
+      "name" : "stdout",
+      "source" : "55b5812ee987995a.txt",
+      "type" : "text/plain",
+      "size" : 50
+    } ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 1,
+    "stepsCount" : 0,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "browser::0",
+    "time" : {
+      "start" : 1601832733593,
+      "stop" : 1601832735797,
+      "duration" : 2204
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "login_guest"
+  }, {
+    "name" : "suite",
+    "value" : "test_main_page"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestLoginFromMainPage"
+  }, {
+    "name" : "host",
+    "value" : "LAPTOP-HNTU4GQT"
+  }, {
+    "name" : "thread",
+    "value" : "16968-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_main_page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "640dc671c49e8c65",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'get'",
+      "time" : {
+        "start" : 1601832664862,
+        "stop" : 1601832664862,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "5512ac836b5f6559",
+      "status" : "passed",
+      "time" : {
+        "start" : 1601370745181,
+        "stop" : 1601370751210,
+        "duration" : 6029
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ "login_guest" ]
+  },
+  "source" : "7c8239ba5e250673.json",
+  "parameterValues" : [ ]
+}
