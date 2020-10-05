@@ -1,5 +1,5 @@
 # Автотесты
-Это репозиторий для хранений автотестов по сайту http://selenium1py.pythonanywhere.com.
+Это репозиторий для хранения автотестов по сайту http://selenium1py.pythonanywhere.com.
 * Я: [Yulia Fedyaeva](https://vk.com/spudnik).
 В проекте используется Page Object Model.
 В папке allure_reports можно посмотреть отчёт о прохождении одного из тест-сьютов.
