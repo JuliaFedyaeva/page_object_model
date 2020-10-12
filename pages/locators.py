@@ -61,3 +61,18 @@ class CatalogPageLocators():
     BUTTON_ADD_TO_CART = (By.XPATH, '//*[@id="default"]/div[2]/div/div/div/section/div/ol/li[1]/article/div[2]/form/button')
     FIRST_ITEM_ON_CATALOG_NAME = (By.XPATH, '//*[@id="default"]/div[2]/div/div/div/section/div/ol/li[1]/article/h3/a')
 
+
+class CheckoutPageLocators():
+    CHECKOUT_PAGE_LINK = 'http://selenium1py.pythonanywhere.com/checkout/'
+    INPUT_NAME = (By.CSS_SELECTOR, 'input#id_first_name')
+    INPUT_LASTNAME = (By.CSS_SELECTOR,'input#id_last_name')
+    INPUT_ADDRESS = (By.CSS_SELECTOR,'input#id_line1')
+    INPUT_CITY = (By.CSS_SELECTOR,'input#id_line4')
+    INPUT_POSTCODE = (By.CSS_SELECTOR,'input#id_postcode')
+    SELECT_COUNTRY = (By.CSS_SELECTOR, 'select#id_country')
+    BUTTON_TO_CONTINUE = (By.XPATH,'//*[@id="new_shipping_address"]/div[13]/div/button')
+    BUTTON_TO_CONTINUE_WITH_SAVED_ADDRESS = (By.XPATH, '//*[@id="select_shipping_address_178"]/button')
+    BUTTON_TO_PREVIEW_ORDER = (By.CSS_SELECTOR, 'a#view_preview')
+    BUTTON_TO_PLACE_ORDER = (By.CSS_SELECTOR, 'button#place-order')
+    SUCCESS_ORDER_MESSAGE_NUM = (By.CSS_SELECTOR, 'p.lead strong')
+    ORDER_NUM_MESSAGE = (By.XPATH, '//*[@id="default"]/div[1]/div/div[2]/h1')

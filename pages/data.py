@@ -11,5 +11,14 @@ class LoginPageData():
     PASSWORD = "nekakuvseh123"
 
 
+class CheckoutPageData():
+    NAME = 'Max'
+    LASTNAME = 'Payne'
+    ADDRESS = 'PlayStation'
+    CITY = 'Nowhere'
+    POSTCODE = '652877'
+    COUNTRY = 'RU'
+
+
 class SearchOnMainPageData():
     BOOK_NAME = 'Google Hacking'
