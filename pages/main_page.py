@@ -11,6 +11,3 @@ class MainPage(BasePage):
     def search_item(self):
         self.browser.find_element(*BasePageLocators.INPUT_SEARCH).send_keys(SearchOnMainPageData.BOOK_NAME)
         self.browser.find_element(*BasePageLocators.INPUT_SEARCH_BUTTON).click()
-
-    def go_to_cart(self):
-        self.browser.find_element(*BasePageLocators.CART_LINK).click()

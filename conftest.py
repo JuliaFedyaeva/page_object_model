@@ -11,7 +11,7 @@ def pytest_addoption(parser):
 
 
 @pytest.fixture(scope="function")
-def browser(request):
+def browser(request, timeout=10):
     browser_language = request.config.getoption("language")
     if browser_language is None: raise pytest.UsageError('test run should contain language fo test')
 
@@ -34,6 +34,8 @@ def browser(request):
         document.implicitly_wait(5)
     else:
         print("Browser {} still is not implemented".format(browser_name))
+
+    document.implicitly_wait(timeout)
 
     yield document
     print("\nquit document..")
