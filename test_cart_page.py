@@ -16,12 +16,13 @@ class TestBuyProduct():
         page = CatalogPage(browser)
         page.should_be_catalog_page()
         page.add_product_to_cart()
-        #Steps
         page.go_to_cart()
         page_cart = CartPage(browser)
         page_cart.should_be_no_empty_cart()
+        # Steps
 
-        #Assert
+
+        # Assert
 
 
 
