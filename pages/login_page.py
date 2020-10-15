@@ -13,7 +13,7 @@ class LoginPage(BasePage):
         self.browser.find_element(*LoginPageLocators.REGISTRATION_FORM_PASSWORD_REPEAT).send_keys(password)
         self.browser.find_element(*LoginPageLocators.REGISTRATION_FORM_BUTTON).click()
 
-    def authorizate_user(self, email, password):
+    def authorize_user(self, email, password):
         self.browser.find_element(*LoginPageLocators.AUTHORIZATION_FORM_EMAIL).send_keys(email)
         self.browser.find_element(*LoginPageLocators.AUTHORIZATION_FORM_PASSWORD).send_keys(password)
         self.browser.find_element(*LoginPageLocators.AUTHORIZATION_FORM_BUTTON).click()

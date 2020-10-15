@@ -6,23 +6,28 @@ from .pages.checkout_page import CheckoutPage
 import pytest
 
 
+@pytest.fixture(scope="function")
+def setup(browser):
+    page = LoginPage(browser)
+    page.open()
+    page.should_be_login_page()
+    page.authorize_user(LoginPageData.EMAIL_AUTH, LoginPageData.PASSWORD)
+    page.should_be_success_register_or_auth_message()
+    page.go_to_catalog_page()
+    page_catalog = CatalogPage(browser)
+    page_catalog.should_be_catalog_page()
+    page_catalog.add_product_to_cart()
+    page_catalog.go_to_cart()
+    page_cart = CartPage(browser)
+    page_cart.should_be_no_empty_cart()
+    page_cart.go_to_buy_process()
+    yield browser
+
+
 class TestBuyProduct():
-    def test_user_can_buy_product(self, browser):
+    def test_user_can_buy_product(self, setup):
         # Arrange
-        page = LoginPage(browser)
-        page.open()
-        page.should_be_login_page()
-        page.authorizate_user(LoginPageData.EMAIL_AUTH, LoginPageData.PASSWORD)
-        page.should_be_success_register_or_auth_message()
-        page.go_to_catalog_page()
-        page_catalog = CatalogPage(browser)
-        page_catalog.should_be_catalog_page()
-        page_catalog.add_product_to_cart()
-        page_catalog.go_to_cart()
-        page_cart = CartPage(browser)
-        page_cart.should_be_no_empty_cart()
-        page_cart.go_to_buy_process()
-        page_checkout = CheckoutPage(browser)
+        page_checkout = CheckoutPage(setup)
         page_checkout.should_be_checkout_page()
         page_checkout.should_be_address_form()
         # Steps
@@ -36,22 +41,9 @@ class TestBuyProduct():
         page_checkout.should_be_success_message_order()
 
     @pytest.mark.xfail
-    def test_user_cant_buy_product_without_payment(self, browser):
+    def test_user_cant_buy_product_without_payment(self, setup):
         # Arrange
-        page = LoginPage(browser)
-        page.open()
-        page.should_be_login_page()
-        page.authorizate_user(LoginPageData.EMAIL_AUTH, LoginPageData.PASSWORD)
-        page.should_be_success_register_or_auth_message()
-        page.go_to_catalog_page()
-        page_catalog = CatalogPage(browser)
-        page_catalog.should_be_catalog_page()
-        page_catalog.add_product_to_cart()
-        page_catalog.go_to_cart()
-        page_cart = CartPage(browser)
-        page_cart.should_be_no_empty_cart()
-        page_cart.go_to_buy_process()
-        page_checkout = CheckoutPage(browser)
+        page_checkout = CheckoutPage(setup)
         page_checkout.should_be_checkout_page()
         page_checkout.should_be_address_form()
         # Steps

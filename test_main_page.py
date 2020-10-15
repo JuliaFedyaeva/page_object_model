@@ -74,7 +74,7 @@ class TestCanAuthFromMainPage():
         login_page = LoginPage(browser)
         login_page.should_be_authorization_form()
         # Steps
-        login_page.authorizate_user(LoginPageData.EMAIL_AUTH, LoginPageData.PASSWORD)
+        login_page.authorize_user(LoginPageData.EMAIL_AUTH, LoginPageData.PASSWORD)
         # Assert
         login_page.should_be_success_register_or_auth_icon()
         login_page.should_be_success_register_or_auth_message()
@@ -88,7 +88,7 @@ class TestCanSearchFromMainPage():
         page.open()
         page.should_be_search_form()
         # Steps
-        page.search_item()
+        page.set_input_search()
         search_page = SearchPage(browser)
         # Assert
         search_page.should_be_right_item_after_search_from_main_page()
